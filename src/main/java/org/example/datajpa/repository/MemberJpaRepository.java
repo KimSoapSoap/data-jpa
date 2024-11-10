@@ -27,7 +27,7 @@ public class MemberJpaRepository {
         return em.find(Member.class, id);
     }
 
-    //옵셔널로 감싸서 리턴
+    //옵셔널로 감싸서 리턴. 자바 8이후부터. 값이 있으면 값을 출력, 값이 없으면 null 처리 혹은 다른 코드처리 등(ofNullable, orElse로)
     public Optional<Member> findById(Long id) {
         Member member = em.find(Member.class, id);
         return Optional.ofNullable(member);
