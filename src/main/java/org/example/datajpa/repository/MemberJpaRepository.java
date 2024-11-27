@@ -18,6 +18,7 @@ public class MemberJpaRepository {
 
     //업데이트가 없는 것은 JPA는 수정을 dirty cheking이라는 변경 감지로 업데이트 해주기 때문
 
+
     public Member save(Member member) {
         em.persist(member);
         return member;
